@@ -1,6 +1,21 @@
 # Mac Disk Imager
 
+[![Latest Release](https://img.shields.io/github/v/release/Radzio442/Mac-Disk-Imager?display_name=tag&sort=semver)](https://github.com/Radzio442/Mac-Disk-Imager/releases/latest)
+[![macOS](https://img.shields.io/badge/macOS-13%2B-black?logo=apple)](https://github.com/Radzio442/Mac-Disk-Imager)
+[![Swift](https://img.shields.io/badge/Swift-5.9%2B-orange?logo=swift)](https://www.swift.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 Native macOS disk imaging utility inspired by Win32 Disk Imager.
+
+Read, write and verify full disk images on USB, SD and eMMC devices from a native macOS application.
+
+## Download
+
+### Latest stable release — v1.0.0
+
+**[Download Mac_Disk_Imager_1.0.0.dmg](https://github.com/Radzio442/Mac-Disk-Imager/releases/download/v1.0.0/Mac_Disk_Imager_1.0.0.dmg)**
+
+[View all releases](https://github.com/Radzio442/Mac-Disk-Imager/releases)
 
 **Version:** 1.0.0  
 **Platform:** macOS 13 or later  
@@ -18,6 +33,18 @@ Native macOS disk imaging utility inspired by Win32 Disk Imager.
 - Automatic unmount/eject handling
 - Universal macOS application build
 - Privileged helper installation on first use
+
+## Screenshot
+
+Add a screenshot as:
+
+```text
+docs/screenshot.png
+```
+
+Then it will be shown here:
+
+![Mac Disk Imager](docs/screenshot.png)
 
 ## Build
 
@@ -95,6 +122,7 @@ macOS will request administrator authorization.
 Mac-Disk-Imager/
 ├── Package.swift
 ├── README.md
+├── CHANGELOG.md
 ├── LICENSE
 ├── .gitignore
 ├── MyIcon.icns
@@ -112,17 +140,31 @@ Mac-Disk-Imager/
         └── main.swift
 ```
 
-## GitHub releases
+## GitHub Releases
 
-Do not commit generated `.dmg` files to the repository. Publish them under **GitHub Releases** instead.
+Generated `.dmg` files are intentionally excluded from the Git repository.
+
+Release binaries are available here:
+
+https://github.com/Radzio442/Mac-Disk-Imager/releases
 
 Example release workflow:
 
 ```bash
 gh release create v1.0.0 \
-  dist/Mac_Disk_Imager_1.0.0.dmg \
-  --title "Mac Disk Imager 1.0.0" \
-  --notes "Initial macOS release."
+  Mac_Disk_Imager_1.0.0.dmg \
+  --title "Mac Disk Imager v1.0.0" \
+  --notes "Initial public release of Mac Disk Imager for macOS."
+```
+
+## Updating the repository
+
+After making changes:
+
+```bash
+git add .
+git commit -m "Update Mac Disk Imager"
+git push
 ```
 
 ## Safety
